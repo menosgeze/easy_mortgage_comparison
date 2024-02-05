@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "src"
+version = "0.1.0"
+description = "Generates a Dash Interface to compare two scenarios of how to repay your mortgage."
+authors = ["menosgeze <menosgeze@gmail.com>"]
+license = "MIT"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.9"
+plotly = "^5.18"
+numpy = "^1.24"
+dash = "2.15.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
