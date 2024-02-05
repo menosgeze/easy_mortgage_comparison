@@ -61,8 +61,8 @@ def compute_raw_payments(
         columns=[
           "n_months_remaining",
           "standing_principal",
-          "monthly_interest_expense",
-          "monthly_principal_expense",
+          "monthly_interest",
+          "monthly_principal",
         ],
     ).reset_index(names="month_number")
 
@@ -121,6 +121,7 @@ def compute_monthly_payment(
         duration
     )[: len(payments)]
 
+    payments['acc_interest'] = payments['monthly_interest'].cumsum()
     return payments
 
 
